@@ -115,23 +115,35 @@ MUSICA INTRO
 ====================================
 */
 
-window.addEventListener('load', () => {
+let introStarted = false;
+
+function startIntroMusic() {
+
+    if (introStarted) return;
+
+    introStarted = true;
 
     if (introMusic) {
 
         introMusic.volume = 0.4;
 
-        introMusic.play().catch(() => {
+        introMusic.currentTime = 16;
 
-            console.log(
-                'Esperando interacción usuario'
-            );
-
-        });
+        introMusic.play();
 
     }
 
-});
+}
+
+document.addEventListener(
+    'click',
+    startIntroMusic
+);
+
+document.addEventListener(
+    'touchstart',
+    startIntroMusic
+);
 
 /*
 ====================================
@@ -166,7 +178,7 @@ startBtn.addEventListener('click', () => {
 
     if (questionsMusic) {
 
-        questionsMusic.volume = 0.35;
+        questionsMusic.volume = 0.2;
 
         questionsMusic.play();
 
@@ -212,7 +224,9 @@ function loadQuestion() {
 
         if (finalMusic) {
 
-            finalMusic.volume = 0.45;
+            finalMusic.volume = 0.9;
+
+            finalMusic.currentTime = 56;
 
             finalMusic.play();
 
@@ -245,6 +259,16 @@ function loadQuestion() {
     */
 
     changeBackground(q.image);
+
+    /*
+        NUEVA IMAGEN DESENFOCADA
+    */
+
+    const bg = document.querySelector(
+        '.background'
+    );
+
+    bg.style.filter = 'blur(12px)';
 
     /*
         Limpiar respuestas
@@ -409,6 +433,16 @@ confirmBtn.addEventListener('click', () => {
     zoomBackground();
 
     /*
+        QUEDA ENFOCADO
+    */
+
+    const bg = document.querySelector(
+        '.background'
+    );
+
+    bg.style.filter = 'blur(0px)';
+
+    /*
         Esperar reveal
     */
 
@@ -449,7 +483,7 @@ confirmBtn.addEventListener('click', () => {
         resultTitle.innerText =
             correct
                 ? 'Correcto ❤️'
-                : 'Incorrecto 💔';
+                : 'Incorrecto ❤️';
 
         resultText.innerText =
             correct

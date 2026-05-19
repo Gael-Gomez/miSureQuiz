@@ -132,6 +132,11 @@ body {
 
 }
 
+#resultText{
+    margin: 10px 0 15px 0;
+    line-height: 30px;
+}
+
 /* TITULOS */
 
 .card h1 {
