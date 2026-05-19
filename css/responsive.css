@@ -1,0 +1,115 @@
+/* CELULARES */
+
+@media (max-width: 500px) {
+
+    /* CARDS */
+
+    .card,
+    .modal-card,
+    .result-card {
+
+        padding: 22px;
+
+        border-radius: 22px;
+
+    }
+
+    /* TITULOS */
+
+    .card h1 {
+
+        font-size: 30px;
+
+    }
+
+    .question-container h2 {
+
+        font-size: 24px;
+
+        line-height: 1.4;
+
+    }
+
+    /* RESPUESTAS */
+
+    .answer {
+
+        padding: 16px;
+
+        font-size: 15px;
+
+    }
+
+    /* BOTONES */
+
+    button {
+
+        padding: 14px;
+
+        font-size: 15px;
+
+    }
+
+    /* INPUT */
+
+    input {
+
+        padding: 14px;
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 360px) {
+
+    .question-container h2 {
+
+        font-size: 21px;
+
+    }
+
+    .answer {
+
+        padding: 14px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* TABLETS */
+
+@media (min-width: 768px) {
+
+    .card,
+    .modal-card,
+    .result-card {
+
+        max-width: 500px;
+
+    }
+
+    .question-container {
+
+        max-width: 600px;
+
+    }
+
+    .question-container h2 {
+
+        font-size: 34px;
+
+    }
+
+    .answer {
+
+        font-size: 18px;
+
+    }
+
+}

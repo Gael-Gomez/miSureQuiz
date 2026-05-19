@@ -1,0 +1,31 @@
+:root {
+
+    /* Colores principales */
+
+    --violet: #7c3aed;
+
+    --pink: #ec4899;
+
+    --red: #ef4444;
+
+    --dark: #05010d;
+
+    --white: #ffffff;
+
+    /* Glass */
+
+    --glass: rgba(255, 255, 255, 0.08);
+
+    --border: rgba(255, 255, 255, 0.15);
+
+    /* Sombras */
+
+    --shadow: 0 0 30px rgba(124, 58, 237, 0.35);
+
+    /* Correcto / incorrecto */
+
+    --success: #22c55e;
+
+    --danger: #ef4444;
+
+}

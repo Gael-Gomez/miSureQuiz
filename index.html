@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para vos ❤️</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Fondo dinámico -->
+    <div class="background"></div>
+
+    <!-- Oscurecedor -->
+    <div class="overlay"></div>
+
+    <div id="app">
+
+        <!-- INTRO -->
+        <div class="intro-screen active">
+
+            <div class="card">
+
+                <h1>Bienvenida ❤️</h1>
+
+                <p>
+                    Este cuestionario es muy importante...
+                </p>
+
+                <input
+                    type="text"
+                    id="playerName"
+                    placeholder="Escribí tu nombre"
+                >
+
+                <button id="startBtn">
+                    Comenzar
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PREGUNTAS -->
+        <div class="question-screen hidden">
+
+            <!-- Barra superior -->
+            <div class="top-bar">
+
+                <span id="questionCounter"></span>
+
+                <div class="progress">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Contenido -->
+            <div class="question-container">
+
+                <h2 id="questionText"></h2>
+
+                <div id="answersContainer"></div>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL CONFIRMAR -->
+        <div class="confirm-modal hidden">
+
+            <div class="modal-card">
+
+                <h3>
+                    ¿Estás segura de enviar esta respuesta?
+                </h3>
+
+                <div class="modal-buttons">
+
+                    <button id="cancelBtn">
+                        Cancelar
+                    </button>
+
+                    <button id="confirmBtn">
+                        Enviar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="result-modal hidden">
+
+            <div class="result-card">
+
+                <h2 id="resultTitle"></h2>
+
+                <p id="resultText"></p>
+
+                <button id="continueBtn">
+                    Continuar ❤️
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- FINAL -->
+        <div class="final-screen hidden">
+
+            <div class="card">
+
+                <h1>❤️</h1>
+
+                <p>
+                    Gracias por llegar hasta acá...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio id="introMusic" loop>
+        <source
+            src="assets/audio/intro.mp3"
+            type="audio/mp3"
+        >
+    </audio>
+
+    <audio id="questionsMusic" loop>
+        <source
+            src="assets/audio/questions.mp3"
+            type="audio/mp3"
+        >
+    </audio>
+
+    <audio id="finalMusic" loop>
+        <source
+            src="assets/audio/final.mp3"
+            type="audio/mp3"
+        >
+    </audio>
+
+    <!-- JS -->
+    <script src="js/questions.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
